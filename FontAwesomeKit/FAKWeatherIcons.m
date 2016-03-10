@@ -11,8 +11,10 @@
     });
 #endif
     
-    UIFont *font = [UIFont fontWithName:@"WeatherIcons-Regular" size:size];
-    NSAssert(font, @"UIFont object should not be nil, check if the font file is added to the application bundle and you're using the correct font name.");
+    
+    NSString *fontName = @"WeatherIcons-Regular";
+    UIFont *font = [UIFont fontWithName:fontName size:size];
+    NSAssert(font, @"UIFont object should not be nil, check if the font file %@ is added to the application bundle and you're using the correct font name.", fontName);
     return font;
 }
 
